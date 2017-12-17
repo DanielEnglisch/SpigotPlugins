@@ -1,5 +1,5 @@
-main: at.jellybit.plugin.Plugin
+main: at.jellybit.repairchest.RepairChest
 author: Daniel Englisch
-name: Plugin
+name: RepairChest
 version: 1.0
-description: A plugin
+description: Repairs mending items
