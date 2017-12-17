@@ -1,7 +1,0 @@
-main: at.jellybit.mendit.MendIt
-author: Daniel Englisch
-name: MendIt
-version: 1.0
-description: Mends items using experience.
-commands:
-  mend:
