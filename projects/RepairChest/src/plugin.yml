@@ -1,5 +1,7 @@
-main: at.jellybit.repairchest.RepairChest
+main: at.jellybit.mendit.MendIt
 author: Daniel Englisch
-name: RepairChest
+name: MendIt
 version: 1.0
-description: Repairs mending items
+description: Mends items using experience.
+commands:
+  mend:
