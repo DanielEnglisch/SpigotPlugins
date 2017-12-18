@@ -6,4 +6,4 @@ description: Mends items using experience.
 commands:
   mend:
     description: Mends item in hand if you have enough levels
-    usage: /mend
+    usage: Usage /mend [it]
