@@ -1,0 +1,7 @@
+main: {PACKAGE}.{MAIN_CLASS}
+author: {AUTHOR}
+name: {NAME}
+version: {VERSION}
+description: {DESCRIPTION}
+commands:
+  {COMMANDS}
