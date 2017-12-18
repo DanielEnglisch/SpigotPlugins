@@ -29,6 +29,9 @@ public class MendIt extends JavaPlugin implements CommandExecutor {
 
 		if (sender instanceof Player) {
 
+			if (args.length > 1)
+				return false;
+
 			Player p = (Player) sender;
 			ItemStack s = p.getInventory().getItemInMainHand();
 			if (s != null && s.hasItemMeta()) {
@@ -42,15 +45,23 @@ public class MendIt extends JavaPlugin implements CommandExecutor {
 					if (needed == 0)
 						needed = 1;
 
-					if (needed <= lvl) {
-						s.setDurability((short) 0);
-						p.setLevel(lvl - needed);
-						p.playSound(p.getLocation(), Sound.BLOCK_ANVIL_USE, 10, 1);
+					if (args.length == 1 && args[0].equalsIgnoreCase("it")) {
+						if (needed <= lvl) {
+							s.setDurability((short) 0);
+							p.setLevel(lvl - needed);
+							p.playSound(p.getLocation(), Sound.BLOCK_ANVIL_USE, 10, 1);
 
-					} else {
+						} else {
+							p.sendMessage("You need " + needed + " levels to repair this item!");
+
+						}
+					} else if (args.length == 0) {
 						p.sendMessage("You need " + needed + " levels to repair this item!");
+						p.sendMessage("Type \"/mend it\" to repair it!");
 
-					}
+					} else
+						return false;
+
 				} else {
 					p.sendMessage("You need Mending in order to repair your item!");
 				}

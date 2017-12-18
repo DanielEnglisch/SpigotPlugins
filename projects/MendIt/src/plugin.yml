@@ -5,3 +5,5 @@ version: 1.0
 description: Mends items using experience.
 commands:
   mend:
+    description: Mends item in hand if you have enough levels
+    usage: Usage /mend [it]
