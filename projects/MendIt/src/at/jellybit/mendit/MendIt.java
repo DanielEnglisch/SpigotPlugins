@@ -1,5 +1,6 @@
 package at.jellybit.mendit;
 
+import org.bukkit.Sound;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
@@ -44,6 +45,7 @@ public class MendIt extends JavaPlugin implements CommandExecutor {
 					if (needed <= lvl) {
 						s.setDurability((short) 0);
 						p.setLevel(lvl - needed);
+						p.playSound(p.getLocation(), Sound.BLOCK_ANVIL_USE, 10, 1);
 
 					} else {
 						p.sendMessage("You need " + needed + " levels to repair this item!");
