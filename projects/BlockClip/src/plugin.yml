@@ -1,0 +1,5 @@
+main: at.jellybit.blockclip.BlockClip
+author: Daniel Englisch
+name: BlockClip
+version: 1.0
+description: Right Sneak Click with feather to create temporary hole in wall.
