@@ -1,0 +1,5 @@
+main: at.jellybit.xpfarmer.XPFarmer
+author: Daniel Englisch
+name: XPFarmer
+version: 1.0
+description: Gain XP by farming crops.
