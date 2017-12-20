@@ -45,6 +45,7 @@ public class XPFarmer extends JavaPlugin implements Listener {
 	public void onBlockBreak(BlockBreakEvent e) {
 
 		if (e.getBlock().getType() == Material.SUGAR_CANE_BLOCK) {
+
 			int hasTop = 1;
 			if (e.getBlock().getRelative(0, 1, 0).getType() == Material.SUGAR_CANE_BLOCK) {
 				e.getBlock().getRelative(0, 1, 0).setType(Material.AIR);
@@ -65,12 +66,15 @@ public class XPFarmer extends JavaPlugin implements Listener {
 
 			}
 
-		}
+		}else
 
-		if (e.getBlock().getType() == Material.WHEAT || e.getBlock().getType() == Material.CARROT
+		if (e.getBlock().getType() == Material.CROPS || e.getBlock().getType() == Material.CARROT
 				|| e.getBlock().getType() == Material.POTATO) {
+
+
 			if (e.getBlock().getData() == 0x7) {
 				spawnOrb(e.getBlock().getLocation(), 1, 1);
+
 			}
 		}
 
