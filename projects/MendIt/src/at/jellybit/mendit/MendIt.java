@@ -41,7 +41,7 @@ public class MendIt extends JavaPlugin implements CommandExecutor {
 						p.sendMessage("Nothing to repair!");
 						return true;
 					}
-					int needed = (s.getDurability()) / 100;
+					int needed = (s.getDurability()) / 10;
 					if (needed == 0)
 						needed = 1;
 
