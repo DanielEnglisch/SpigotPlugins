@@ -1,0 +1,9 @@
+main: at.jellybit.autocompressor.AutoCompressor
+author: Daniel Englisch
+name: AutoCompressor
+version: 1.0
+description: Compresses e.g 9 iron to 1 iron block
+commands:
+  compress:
+    usage: /compress
+    description: Compresses items in every loaded chest
