@@ -1,7 +1,5 @@
 package at.jellybit.xpfarmer;
 
-import java.util.Random;
-
 import org.bukkit.Material;
 import org.bukkit.block.Block;
 import org.bukkit.craftbukkit.v1_12_R1.CraftWorld;
@@ -82,7 +80,7 @@ public class XPFarmer extends JavaPlugin implements Listener {
 
 	public void spawnOrb(org.bukkit.Location l, int amount, int value) {
 
-		if (new Random().nextBoolean())
+		if (Math.random() > 0.33)
 			return;
 
 		double x = l.getX(), y = l.getY(), z = l.getZ();
