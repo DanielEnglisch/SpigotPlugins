@@ -64,14 +64,31 @@ public class XPFarmer extends JavaPlugin implements Listener {
 
 			}
 
-		}else
+		} else
 
 		if (e.getBlock().getType() == Material.CROPS || e.getBlock().getType() == Material.CARROT
 				|| e.getBlock().getType() == Material.POTATO) {
 
-
 			if (e.getBlock().getData() == 0x7) {
 				spawnOrb(e.getBlock().getLocation(), 1, 1);
+				
+				e.getBlock().setType(e.getBlock().getType());
+				
+				switch(e.getBlock().getType()) {
+				case CROPS: e.getBlock().getWorld().dropItem(e.getBlock().getLocation(), new ItemStack(Material.WHEAT,1)); break;
+				case CARROT: e.getBlock().getWorld().dropItem(e.getBlock().getLocation(), new ItemStack(Material.CARROT_ITEM,1)); break;
+				case POTATO: e.getBlock().getWorld().dropItem(e.getBlock().getLocation(), new ItemStack(Material.POTATO_ITEM,1)); break;
+				default:
+					break;
+
+				}
+				
+				e.setCancelled(true);
+				
+
+			}else if(!e.getPlayer().isSneaking()) {
+				e.setCancelled(true);
+				e.getPlayer().sendMessage("Sneak to break seeds.");
 
 			}
 		}
