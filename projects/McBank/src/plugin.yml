@@ -1,0 +1,23 @@
+name: EcoStats
+main: org.xeroserver.EcoStats.EcoStats
+version: 1.0
+description: This plugin adds Banks just like in real life.
+author: Daniel Englisch
+authors: [Fabian Aigner]
+commands:
+  eco:
+    description: Economy Commands
+    usage: Error!
+permissions:
+   eco.*:
+     description: Gives access to all bank commands
+     children:
+       eco.worldCount: true
+       eco.info: true
+       eco.help: true
+   eco.help:
+     default: true
+   eco.info:
+     default: true
+   eco.worldCount:
+     default: op
